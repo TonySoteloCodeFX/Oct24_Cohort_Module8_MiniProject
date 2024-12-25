@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* font-family: "Anton", serif; */
+/* font-family: "Roboto", serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-image: url(/images/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header_nav_container, .footer_nav_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 15%;
+    height: 50px;
+    font-size: 25px;
+    font-family: "Anton", serif;
+    border-radius: 12px;
+    background: #ffffff1a;
+    border: 1px solid #ffffff20;
+    backdrop-filter: blur(16px) saturate(120%);
+}
+
+.header_nav_container a, .footer_nav_container a{
+    text-decoration: none;
+    margin: 0px 20px;
+    color: black;
+    text-shadow: #00ffee 0px 0px 7px;
+1}
+
+.profile_pic {
+    border-radius: 50%;
+    width: 450px;
+    margin: 20px 0px;
+    box-shadow: 0px 0px 50px;
+    color: #00ffee;
+}
+
+.intro {
+    text-align: center;
+    width: 900px;
+    padding: 0px 20px;
+    border-radius: 12px;
+    background: #ffffff1a;
+    border: 1px solid #ffffff20;
+    backdrop-filter: blur(35px) saturate(120%);
+}
+
+.name {
+    font-family: "Roboto", serif;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 900;
+    color: black;
+}
+
+.role {
+    font-family: "Anton", serif;
+    font-size: 80px;
+    color: black;
+}
+
+.hr {
+    width: 850px;
+    height: 5px;
+    margin: 20px;
+    background-color: #00ffee;
+}
+
+.about_me_section, .skills_section, .chat_section {
+    color: black;
+    border-radius: 12px;
+    background: #ffffff1a;
+    border: 1px solid #ffffff20;
+    backdrop-filter: blur(35px) saturate(120%);
+    padding: 0px 20px 20px 20px;
+}
+
+h2 {
+    font-size: 40px;
+    font-family: "Anton", serif;
+    margin: 20px 0px;
+}
+
+p, .skills, .inputs {
+    font-family: "Roboto", serif;
+    font-weight: 700;
+    line-height: 2rem;
+    width: 850px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(11, auto);
+    column-gap: 5px;
+    row-gap: 10px;
+    grid-template-rows: 100px auto;
+    width: 850px;
+    text-shadow: #00ffee 0px 2px 7px;
+}
+
+.skill_premiere, .skill_after_effects, .skill_photoshop, .skill_maya {
+    width: 30px;
+    height: 100%;
+    align-self: end;
+    justify-self: center;
+    background-color: #00ffee;
+}
+
+.skill_blender, .skill_zbrush, .skill_houdini, .skill_substance, .skill_nuke, .skill_unity, .skill_unreal {
+    width: 30px;
+    height: 50%;
+    align-self: end;
+    justify-self: center;
+    background-color: #00ffee;
+}
+
+.field {
+    position: relative;
+}
+
+input::placeholder {
+    color: black;
+    opacity: .7;
+}
+
+.field input {
+    color: #00ffee;
+    background: none;
+    padding: 0.625rem;
+    border: 2px solid #00ffee;
+}
+
+.field label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    translate: 0.625rem 0.625rem;
+    font-weight: 900;
+    padding-inline: 0.25rem;
+    border: 2px solid transparent;
+    pointer-events: none;
+    transition: translate 250ms, background-color 250ms, border-color 250ms;
+}
+
+.field:focus-within label, .field:not(:has(:placeholder-shown)) label{
+    translate: 0.325rem -1rem;
+    border: #00ffee;
+    color: #00ffee;
+}
+
+.field ::placeholder {
+    color: transparent;
+}
+
+.inputs div {
+    margin: 20px 0px;
+}
